@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Otto : MonoBehaviour
 {
-
+    doorManager d742act;
     private Rigidbody2D rb;
     private int speed = 10;
 
@@ -13,6 +13,7 @@ public class Otto : MonoBehaviour
     void Start()
     {
          rb = GetComponent<Rigidbody2D>();
+        d742act = GameObject.FindGameObjectWithTag("Aula742").GetComponent<doorManager>();
     }
 
     // Update is called once per frame
@@ -27,5 +28,13 @@ public class Otto : MonoBehaviour
         float vInput = Input.GetAxis("Vertical");
 
         rb.velocity = new Vector2 (hInput * speed, vInput * speed);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Atun"))
+        {
+            d742act.d742in = true;
+        }
     }
 }
