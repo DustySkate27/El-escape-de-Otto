@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/pasillos.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/menu.unity
+    guid: a1497d90ee16e8b478b0f8a567d8a110
   - enabled: 1
     path: Assets/Scenes/742.unity
     guid: 02da8caca91caf544abc067b95a2b12f
+  - enabled: 1
+    path: Assets/Scenes/pasillos.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects: {}
