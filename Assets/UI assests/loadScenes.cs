@@ -11,7 +11,7 @@ public class loadScenes : MonoBehaviour
     }
     public void loadGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("pasillos");
     }
     public void pausar()
     {
