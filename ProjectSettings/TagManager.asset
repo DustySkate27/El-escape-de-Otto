@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Aula742
-  - Atun
+  - AtunIn
+  - AtunOut
   layers:
   - Default
   - TransparentFX

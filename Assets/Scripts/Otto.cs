@@ -5,15 +5,13 @@ using UnityEngine;
 
 public class Otto : MonoBehaviour
 {
-    doorManager d742act;
     private Rigidbody2D rb;
     private int speed = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-         rb = GetComponent<Rigidbody2D>();
-        d742act = GameObject.FindGameObjectWithTag("Aula742").GetComponent<doorManager>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -32,9 +30,18 @@ public class Otto : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Atun"))
+        if (collision.gameObject.CompareTag("AtunIn"))
         {
-            d742act.d742in = true;
+            doorManager.d742in = true;
+            Destroy(collision.gameObject);
+            
+        }
+
+        if (collision.gameObject.CompareTag("AtunOut") && doorManager.d742out == false)
+        {
+            doorManager.d742out = true;
+            Destroy(collision.gameObject);
+            doorManager.exists = false;
         }
     }
 }
